@@ -89,3 +89,9 @@ button{
         background-color: white;
     }
 }
+
+.left-bar {
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+}
