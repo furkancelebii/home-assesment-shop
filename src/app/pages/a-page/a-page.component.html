@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="left-bar type-button">
+        <app-left-bar></app-left-bar>
+      </div>
+    <div class="centered-content">
+        <form [formGroup]="addProductForm">
+            <div>
+                <h2>Production</h2>
+            </div>
+            <div class="form-container">
+                <div class="form-group">
+                    <input type="text" formControlName="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="number" formControlName="price" placeholder="Price">
+                </div>
+                <div class="form-group">
+                    <input type="text" formControlName="description" placeholder="Description">
+                </div>
+            </div>
+            <div class="form-button">
+                <button [ngClass]="menuService.color" [disabled]="isEmpty" (click)="reset()">
+                    Reset
+                </button>
+                <button [ngClass]="menuService.color" [disabled]="addProductForm.invalid" (click)="add()">
+                    Add
+                </button>
+                
+            </div>
+        </form>
+    </div>
+</div>
